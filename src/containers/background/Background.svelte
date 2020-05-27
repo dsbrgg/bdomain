@@ -40,7 +40,7 @@
 
         p5.noStroke();
         p5.fill(mouseY, height, height);
-        p5.rect(barX, barWidth - 30, height, height);
+        p5.rect(barX, 0, height, height);
 
         lastBar = whichBar;
       }
