@@ -12,9 +12,9 @@ const aliases = alias({
   entries: [
     { find: 'App.svelte', replacement: './App.svelte' },
     { find: 'p5', replacement: 'public/p5.min.js' },
-    { find: 'pages', replacement: 'src/pages' },
+    { find: /^pages\/(.*)/, replacement: 'src/pages/$1' },
     { find: /^containers\/(.*)/, replacement: 'src/containers/$1' },
-    { find: 'components', replacement: 'src/components' },
+    { find: /^components\/(.*)/, replacement: 'src/components/$1' },
     { find: 'util', replacement: 'src/util' }
   ]
 });
