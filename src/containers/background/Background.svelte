@@ -2,28 +2,48 @@
   import Canvas from 'containers/background/Canvas.svelte';
 
   const sketch = p5 => {
+    const barWidth = 30;
+    let lastBar = -1;
+
     p5.setup = () => {
-      const {windowWidth, windowHeight} = p5;
-      p5.createCanvas(windowWidth, windowHeight);
+      const {
+        displayWidth: width, 
+        displayHeight: height, 
+        HSB
+      } = p5;
+
+      p5.createCanvas(width, height);
+      p5.colorMode(HSB, height, height, height);
+      p5.background(255);
     };
 
     p5.windowResize = () => {
-      const {windowWidth, windowHeight} = p5;
-      p5.resizeCanvas(windowWidth, windowHeight);
+      const {
+        displayWidth: width, 
+        displayHeight: height
+      } = p5;
+
+      p5.resizeCanvas(width, height);
     };
 
     p5.draw = () => {
-      const {windowWidth, windowHeight} = p5;
+      const {
+        displayHeight: height, 
+        mouseX, 
+        mouseY
+      } = p5;
 
-      p5.background(127);
-      p5.noStroke();
+      let whichBar = mouseX / barWidth;
+      
+      if (whichBar !== lastBar) {
+        let barX = whichBar * barWidth;
 
-      // for (let i = 0; i < windowHeight; i += 20) {
-      //   p5.fill(129, 206, 15);
-      //   p5.rect(0, i, windowWidth, 10);
-      //   p5.fill(255);
-      //   p5.rect(i, 0, 10, windowHeight);
-      // }
+        p5.noStroke();
+        p5.fill(mouseY, height, height);
+        p5.rect(barX, barWidth - 30, height, height);
+
+        lastBar = whichBar;
+      }
     };
   }; 
 </script>
@@ -34,6 +54,7 @@
     z-index: -99999;
     width: 100%;
     height: 100%;
+    margin: 0;
   }
 </style>
 
