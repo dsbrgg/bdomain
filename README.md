@@ -1,5 +1,3 @@
-# Bdomain
+# Hello you 
 
-* This repo has my personal website that should include the following sections:
-  * Resume
-  * Blog
+![So much code](https://i.chzbgr.com/full/8270686464/h7779056E/coding-is-an-art)
