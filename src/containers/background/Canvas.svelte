@@ -10,6 +10,9 @@
 </script>
 
 <style>
+  #bg-canvas {
+    height: 100%;
+  }
 </style>
 
 <div id='bg-canvas'></div>
