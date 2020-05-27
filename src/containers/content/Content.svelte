@@ -1,0 +1,55 @@
+<script>
+  import { Route, link } from "svelte-routing";
+  import Home from "pages/Home.svelte";
+  import Resume from "pages/Resume.svelte";
+  import Blog from "pages/Blog.svelte";
+</script>
+
+<style>
+  .bg-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  #main-content {
+    background-color: #ffffff;
+    text-align: center;
+    width: 75%;
+    height: 75%;
+  }
+
+  #main-nav {
+    margin-top: 2em;
+    margin-bottom: 2em; 
+  }
+
+  nav#main-nav > * {
+    font-weight: 100;
+    color: inherit;
+  }
+
+  nav#main-nav > a:nth-child(1) {
+    margin-right: 1em;
+  }
+
+  nav#main-nav > a:nth-child(2) {
+    margin-right: 1em;
+  }
+</style>
+
+<div class="bg-content">
+  <div id="main-content">
+    <nav id="main-nav">
+      <a href="blog" use:link>Blog</a>
+      <a href="resume" use:link>Resume</a>
+    </nav>
+    <div>
+      <Route path="/" component="{Home}" />
+      <Route path="blog" component="{Blog}" />
+      <Route path="resume" component="{Resume}" />
+    </div>
+  </div>
+</div>
