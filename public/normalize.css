@@ -3,6 +3,10 @@
 /* Document
    ========================================================================== */
 
+* {
+  font-family: 'Roboto Mono', monospace;
+}
+
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -46,7 +50,8 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
+h1 { 
+  font-weight: 700;
   font-size: 2em;
   margin: 0.67em 0;
 }
