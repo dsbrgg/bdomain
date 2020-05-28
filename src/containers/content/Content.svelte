@@ -41,11 +41,12 @@
   }
  
   .current-content {
-    height: inherit;
+    height: 85%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-y: scroll;
   }
 </style>
 
