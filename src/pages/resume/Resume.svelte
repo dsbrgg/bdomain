@@ -7,7 +7,6 @@
 
 <style>
   .resume-container {
-    display: flex;
     width: 100%;
     height: 100%;
   }
@@ -15,5 +14,8 @@
 
 <div class="resume-container">
   <MainInfo />
-  <!-- <Experience /> -->
+  <Experience />
+  <Experience />
+  <Experience />
+  <Experience />
 </div>
