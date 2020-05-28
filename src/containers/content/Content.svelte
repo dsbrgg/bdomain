@@ -1,7 +1,7 @@
 <script>
   import { Route, link } from "svelte-routing";
   import Home from "pages/Home.svelte";
-  import Resume from "pages/Resume.svelte";
+  import Resume from "pages/resume/Resume.svelte";
   import Blog from "pages/Blog.svelte";
 </script>
 
@@ -16,6 +16,7 @@
 
   #main-content {
     background-color: #ffffff;
+    box-shadow: 0px 0px 60px 10px;
     text-align: center;
     width: 75%;
     height: 75%;
@@ -38,6 +39,14 @@
   nav#main-nav > a:nth-child(2) {
     margin-right: 1em;
   }
+ 
+  .current-content {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 </style>
 
 <div class="bg-content">
@@ -46,7 +55,7 @@
       <a href="blog" use:link>Blog</a>
       <a href="resume" use:link>Resume</a>
     </nav>
-    <div>
+    <div class="current-content">
       <Route path="/" component="{Home}" />
       <Route path="blog" component="{Blog}" />
       <Route path="resume" component="{Resume}" />
