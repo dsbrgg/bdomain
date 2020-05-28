@@ -5,12 +5,31 @@
   .main-info-container {
     margin: 2em; 
   }
+
+  .main-info-data {
+    margin-bottom: 1em;
+  }
+
+  .main-info-description {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 </style>
 
 <div class="main-info-container">
-  <h2>Diego Braga</h2>
-  <h4>Porto, Portugal</h4>
-  <h4>dsbrgg@gmail.com</h4>
+  <div class="main-info-data">
+    <h2>Diego Braga</h2>
+    <span>Porto, Portugal</span>
+    <span>//</span>
+    <span>dsbrgg@gmail.com</span>
+  </div>
 
-  <p>Lorem ipsum this motherfocker here</p>
+  <hr />
+
+  <div class="main-info-description">
+    <span>This is a very fucking short description for you.</span>
+    <span>Just so you fucking hire me and stop the fucking bullshit.</span>
+  </div>
+
+  <hr />
 </div>
