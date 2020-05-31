@@ -10,6 +10,15 @@
     width: 100%;
     height: 100%;
   }
+
+  @media (max-width: 500px), (max-height: 800px) {
+    .resume-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+  }
 </style>
 
 <div class="resume-container">
