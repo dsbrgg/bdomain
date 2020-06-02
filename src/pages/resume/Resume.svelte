@@ -1,6 +1,7 @@
 <script>
-  import Experience from 'pages/resume/components/Experience.svelte';
   import MainInfo from 'pages/resume/components/MainInfo.svelte';
+  import Experience from 'pages/resume/components/Experience.svelte';
+  import Education from 'pages/resume/components/Education.svelte';
 
   export let location;
 </script>
@@ -23,8 +24,10 @@
 
 <div class="resume-container">
   <MainInfo />
+  <Experience first={true} />
   <Experience />
-  <Experience />
-  <Experience />
-  <Experience />
+  <Experience last={true} />
+  <Education first={true} />
+  <Education />
+  <Education last={true} />
 </div>
