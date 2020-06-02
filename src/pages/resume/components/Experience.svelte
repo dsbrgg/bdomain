@@ -1,9 +1,23 @@
 <script>
+  export let first = false;
+  export let last = false;
 </script>
 
 <style>
+  .experience-title {
+    display: inline-block;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: #000000 solid 1px;
+    color: darkgoldenrod;
+  }
+
   .experience-container {
     display: flex;
+    margin-top: 2em;
     margin-left: 4em;
     margin-right: 4em;
     margin-bottom: 4em;
@@ -14,6 +28,7 @@
     box-shadow: 1px 2px 10px 1px;
     flex-direction: column;
     padding: 1em;
+    width: 20em;
   }
 
   .experience-description {
@@ -42,6 +57,10 @@
       margin-bottom: 4em;
     }
 
+    .experience-general {
+      width: 7em;
+    }
+
     .experience-description {
       margin-left: 0em;
       margin-top: 2em;
@@ -54,7 +73,10 @@
   }
 </style>
 
-<div class="experience-container">
+{#if first}
+  <span class="experience-title">Experience</span>
+{/if}
+<div class="experience-container"> 
   <div class="experience-general">
     <h3>Seegno</h3>
     <span>Backend Engineer</span>
@@ -73,5 +95,8 @@
         tech1, tech2, tech3, tech4
       </span>
     </div>
-  </div> 
+  </div>   
 </div>
+{#if last}
+  <hr />
+{/if}
