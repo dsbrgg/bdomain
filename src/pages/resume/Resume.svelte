@@ -1,4 +1,5 @@
 <script>
+  import Transition from 'components/Transition.svelte';
   import MainInfo from 'pages/resume/components/MainInfo.svelte';
   import Experience from 'pages/resume/components/Experience.svelte';
   import Education from 'pages/resume/components/Education.svelte';
@@ -23,11 +24,13 @@
   }
 </style>
 
-<div class="resume-container">
-  <MainInfo />
-  <Experience first={true} />
-  <Experience />
-  <Experience last={true} />
-  <Education first={true} last={true} />
-  <Skills />
-</div>
+<Transition>
+  <div class="resume-container">
+    <MainInfo />
+    <Experience first={true} />
+    <Experience />
+    <Experience last={true} />
+    <Education first={true} last={true} />
+    <Skills />
+  </div>
+</Transition>
