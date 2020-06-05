@@ -32,6 +32,10 @@
     width: 20em;
   }
 
+  .education-name {
+    margin-top: 0.1em;
+  }
+
   .education-description {
     align-self: center;
     margin-left: 4em;
@@ -79,7 +83,7 @@
 {/if}
 <div class="education-container">
   <div class="education-general">
-    <h3>ISLA</h3>
+    <h3 class="education-name">ISLA</h3>
     <span>Web Development</span>
     <span>Sep|2017 - Incomplete</span>
   </div> 
