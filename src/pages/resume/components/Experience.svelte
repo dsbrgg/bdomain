@@ -31,6 +31,10 @@
     width: 20em;
   }
 
+  .experience-name {
+    margin-top: 0.1em;
+  }
+
   .experience-description {
     align-self: center;
     margin-left: 4em;
@@ -46,7 +50,7 @@
 
   .experience-description-tech-label {
     font-weight: 100;
-  }
+  } 
 
   @media (max-width: 500px), (max-height: 800px) {
     .experience-container {
@@ -78,7 +82,7 @@
 {/if}
 <div class="experience-container"> 
   <div class="experience-general">
-    <h3>Seegno</h3>
+    <h3 class="experience-name">Seegno</h3>
     <span>Backend Engineer</span>
     <span>Oct|2019 - Present</span>
   </div> 
