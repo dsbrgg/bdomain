@@ -64,6 +64,7 @@
 
     .education-general {
       width: 7em;
+      margin: auto;
     }
 
     .education-description {
