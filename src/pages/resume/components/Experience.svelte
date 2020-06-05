@@ -63,6 +63,7 @@
 
     .experience-general {
       width: 7em;
+      margin: auto;
     }
 
     .experience-description {
