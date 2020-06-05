@@ -19,6 +19,17 @@
   .main-info-description {
     margin-top: 1em;
     margin-bottom: 1em;
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+
+  @media (max-width: 500px), (max-height: 800px) {
+    .main-info-description {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      margin-left: 0em;
+      margin-right: 0em;
+    }
   }
 </style>
 
