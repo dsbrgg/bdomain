@@ -1,4 +1,5 @@
 <script>
+  import Ratings from 'components/Ratings.svelte';
 </script>
 
 <style>
@@ -22,6 +23,16 @@
     margin-bottom: 4em;
   }
 
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .skills-item {
+    margin-top: 1em;
+  }
+
   @media (max-width: 500px), (max-height: 800px) {
     .skills-container {
       display: flex;
@@ -30,13 +41,26 @@
       margin-right: 4em;
       margin-bottom: 4em;
     }
+
+    .skills-list {
+      width: 100%;
+    }
   }
 </style>
 
 <span class="skills-title">Skills</span>
 <div class="skills-container">
-  <ul>
-    <li>Javascript: OK</li>
-  </ul>
+  <div class="skills-list">
+    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span> 
+    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span>
+    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span> 
+    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span>
+  </div>
+  <div class="skills-list">
+    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span> 
+    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span>
+    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span> 
+    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span>
+  </div>
 </div>
 <hr />
