@@ -3,10 +3,6 @@
 /* Document
    ========================================================================== */
 
-* {
-  font-family: 'Roboto Mono', monospace;
-}
-
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -20,6 +16,7 @@ html {
   margin: 0 !important;
   padding: 0 !important;
   overflow: hidden;
+  font-family: 'Roboto Mono', monospace;
 }
 
 /* Sections
