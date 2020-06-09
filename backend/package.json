@@ -1,0 +1,16 @@
+{
+  "name": "bdomain-backend",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.12.0",
+    "koa-send": "^5.0.0",
+    "puppeteer": "^3.3.0"
+  }
+}
