@@ -3,7 +3,8 @@ module.exports = {
     port: 5001
   },
   pdf: {
-    format: 'A4',
+    headless: true,
+    format: 'Tabloid',
     url: 'http://localhost:5001/pdf',
     parameters: {
       waitUntil: 'networkidle0'
