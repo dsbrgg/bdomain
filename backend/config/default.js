@@ -4,7 +4,7 @@ module.exports = {
   },
   pdf: {
     format: 'A4',
-    url: 'http://localhost:5000',
+    url: 'http://localhost:5001/pdf',
     parameters: {
       waitUntil: 'networkidle0'
     }
