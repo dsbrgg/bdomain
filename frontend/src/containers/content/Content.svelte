@@ -20,7 +20,7 @@
     box-shadow: 0px 0px 60px 10px;
     text-align: center;
     width: 75%;
-    height: 75%;
+    height: 90%;
   }
 
   #main-nav {
