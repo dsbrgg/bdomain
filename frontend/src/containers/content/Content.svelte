@@ -1,8 +1,9 @@
 <script>
-  import { Route, link } from "svelte-routing";
-  import Home from "pages/Home.svelte";
-  import Resume from "pages/resume/Resume.svelte";
-  import Blog from "pages/Blog.svelte";
+  import { Route, link } from 'svelte-routing';
+  import Home from 'pages/Home.svelte';
+  import Resume from 'pages/resume/Resume.svelte';
+  import Blog from 'pages/Blog.svelte';
+  import Pdf from 'pages/Pdf.svelte';
 </script>
 
 <style>
@@ -50,6 +51,7 @@
   }
 </style>
 
+<Route path="pdf" component="{Pdf}" />
 <div class="bg-content">
   <div id="main-content">
     <nav id="main-nav">
