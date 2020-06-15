@@ -10,12 +10,19 @@ const app = new Koa();
 const router = new Router();
 
 const { port } = config.get('server');
-const { format, url, parameters } = config.get('pdf');
+const { headless, format, url, parameters } = config.get('pdf');
 
+const publicContent = async ctx => {
+  await send(ctx, '/', { root: `${__dirname}/public/index.html` });
+};
+
+const publicMiddleware = async ctx => {
+  await send(ctx, ctx.path, { root: `${__dirname}/public` });
+};
 
 // https://blog.risingstack.com/pdf-from-html-node-js-puppeteer/
-router.get('/page', async ctx => {
-  const browser = await puppeteer.launch({ headless: true });
+router.get('/download', async ctx => {
+  const browser = await puppeteer.launch({ headless });
   const page = await browser.newPage();
   await page.goto(url, parameters);
   const pdf = await page.pdf({ format });
@@ -27,28 +34,15 @@ router.get('/page', async ctx => {
   ctx.body = pdf;
 });
 
-router.get('/', async ctx => {
-  await send(ctx, ctx.path, { root: `${__dirname}/public/index.html` });
-});
-
-router.get('/resume', async ctx => {
-  await send(ctx, '/', { root: `${__dirname}/public/index.html` });
-});
-
-router.get('/blog', async ctx => {
-  await send(ctx, '/', { root: `${__dirname}/public/index.html` });
-});
-
-router.get('/pdf', async ctx => {
-  await send(ctx, '/', { root: `${__dirname}/public/index.html` });
-});
+router.get('/', publicContent);
+router.get('/resume', publicContent);
+router.get('/blog', publicContent);
+router.get('/pdf', publicContent);
 
 app
   .use(router.routes())
   .use(router.allowedMethods());
 
-app.use(async ctx => {
-  await send(ctx, ctx.path, { root: `${__dirname}/public` });
-});
+app.use(publicMiddleware);
 
 app.listen(5001);
