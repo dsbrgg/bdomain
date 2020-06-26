@@ -4,7 +4,7 @@ const Koa = require('koa');
 const Router = require('koa-router');
 const config = require('config');
 
-const { port } = config.get('server');
+const { PORT } = process.env;
 const { pdf, webpage } = require('./routes');
 const { publicMiddleware } = require('./middlewares');
 
@@ -15,4 +15,6 @@ pdf(app);
 
 app.use(publicMiddleware);
 
-app.listen(port);
+app.listen(PORT || 5001, () => {
+  console.log(`Listening on port ${PORT || 5001}`);
+});
