@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "dev:push": "heroku container:push web -a bdomain-dev", 
+    "dev:release": "heroku container:release web -a bdomain-dev",
+    "dev:logs": "heroku logs -a bdomain-dev --tail",
+    "start": "node src/server.js"
   },
   "author": "",
   "license": "ISC",
