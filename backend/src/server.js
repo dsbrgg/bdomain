@@ -2,7 +2,9 @@
 
 const Koa = require('koa');
 const Router = require('koa-router');
+const config = require('config');
 
+const { port } = config.get('server');
 const { pdf, webpage } = require('./routes');
 const { publicMiddleware } = require('./middlewares');
 
@@ -13,4 +15,4 @@ pdf(app);
 
 app.use(publicMiddleware);
 
-app.listen(5001);
+app.listen(port);
