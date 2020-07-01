@@ -2,7 +2,6 @@ import svelte from 'rollup-plugin-svelte';
 import alias from '@rollup/plugin-alias';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 
 const production = process.env.NODE_ENV !== 'dev';
@@ -11,21 +10,21 @@ const aliases = alias({
   resolve: ['.svelte', '.js'], //optional, by default this will just look for .js files or folders
   entries: [
     { find: 'App.svelte', replacement: './App.svelte' },
-    { find: /^pages\/(.*)/, replacement: 'src/pages/$1' },
-    { find: /^containers\/(.*)/, replacement: 'src/containers/$1' },
-    { find: /^components\/(.*)/, replacement: 'src/components/$1' },
-    { find: 'util', replacement: 'src/util' }
+    { find: /^pages\/(.*)/, replacement: 'src/client/pages/$1' },
+    { find: /^containers\/(.*)/, replacement: 'src/client/containers/$1' },
+    { find: /^components\/(.*)/, replacement: 'src/client/components/$1' },
+    { find: 'util', replacement: 'src/client/util' }
   ]
 });
 
 export default [{
   // client
-	input: 'src/client.js',
+	input: 'src/client/client.js',
 	output: {
 		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: 'src/server/public/build/bundle.js'
+		file: 'dist/public/build/bundle.js'
 	},
 	plugins: [
 		svelte({
@@ -35,7 +34,7 @@ export default [{
 			// we'll extract any component CSS out into
 			// a separate file - better for performance
 			css: css => {
-				css.write('src/server/public/build/bundle.css');
+				css.write('dist/public/build/bundle.css');
 			}
 		}),
 
@@ -53,17 +52,14 @@ export default [{
 
     // allow relative path finding
     aliases
-	],
-	watch: {
-		clearScreen: false
-	}
+	]
 }, {
   // ssr
-  input: 'src/App.svelte',
+  input: 'src/client/App.svelte',
   output: {
     sourcemap: true,
     format: 'cjs',
-    file: 'src/server/public/build/ssr.js'
+    file: 'dist/public/build/ssr.js'
   },
   plugins: [
     svelte({
