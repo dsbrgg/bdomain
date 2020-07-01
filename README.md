@@ -8,3 +8,12 @@
 - npm run build:dev
 - npm run dev
 
+## Deploy
+
+- npm run docker:build
+- npm run dev:push
+- npm run dev:release
+
+To check how everything is running on deployment:
+
+- npm run dev:logs
