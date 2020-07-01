@@ -1,5 +1,14 @@
-dist/
 node_modules/
-public/build/
+
+dist/server.js
+dist/routes
+dist/middlewares
+dist/template
+dist/public/build/*
+!dist/public/index.html
+!dist/public/normalize.css
+!dist/public/favicon.png
+
+src/server/public/build/
 
 .DS_Store
