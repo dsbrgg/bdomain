@@ -11,7 +11,7 @@
 
   const store = writable({ test });
   
-  setContext('store', store);
+  setContext('initialState', store);
 </script>
 
 <Router url="{url}">

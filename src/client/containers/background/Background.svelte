@@ -1,7 +1,7 @@
 <script>
   import Canvas from 'containers/background/Canvas.svelte';
   
-const sketch = p5 => {
+  const sketch = p5 => {
     const barWidth = 10;
     let lastBar = -1;
 

@@ -6,9 +6,8 @@
   import Blog from 'pages/Blog.svelte';
   import Pdf from 'pages/Pdf.svelte';
 
-  const { test } = getContext('store');
-
-  console.log('COntent component', test)
+  const test = getContext('initialState');
+  console.log(test)
 </script>
 
 <style>
