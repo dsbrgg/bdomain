@@ -5,7 +5,6 @@
 ## Setup (for now, at least, only for dev)
 
 - npm install
-- npm run build:dev
 - npm run dev
 
 ## Deploy
