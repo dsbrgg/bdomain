@@ -7,9 +7,17 @@
   import Background from 'containers/background/Background.svelte';
 
   export let url;
-  export let test;
+  export let mainInfo;
+  export let experience;
+  export let education;
+  export let skills;
 
-  const store = writable({ test });
+  const store = writable({ 
+    mainInfo, 
+    experience,
+    education,
+    skills
+  });
   
   setContext('initialState', store);
 </script>
