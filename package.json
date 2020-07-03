@@ -10,7 +10,7 @@
     "dev:release": "heroku container:release web -a bdomain-dev",
     "dev:logs": "heroku logs -a bdomain-dev --tail",
     "start": "node server.js",
-    "build": "rm -rf dist/public/build/* && rm -rf src/server/public/build/* && rollup -c && babel src/server -d dist && cp -r ./dist/public/* ./src/server/public && cp -r ./config dist/config",
+    "build": "rm -rf dist/public/build/* && rm -rf src/server/public/build/* && rm -rf dist/config && rollup -c && babel src/server -d dist && cp -r ./dist/public/* ./src/server/public && cp -r ./config dist/config",
     "build:dev": "NODE_ENV=dev npm run build",
     "docker": "docker-compose up",
     "docker:build": "docker image build -t bdomain-dev ."
