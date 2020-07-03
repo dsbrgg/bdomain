@@ -4,10 +4,11 @@ module.exports = {
   },
   pdf: {
     headless: true,
+    filename: 'diebo_braga_cv',
     format: 'Tabloid',
     url: 'http://localhost:5001/pdf',
     parameters: {
       waitUntil: 'networkidle0'
     }
   }
-}
+};
