@@ -27,8 +27,11 @@
 
   .skills-list {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    height: 7em;
+    width: 100%;
   }
 
   .skills-item {
@@ -54,7 +57,7 @@
 <div class="skills-container">
   <div class="skills-list">
     {#each skills as { name, rating }}
-      <span class="skills-item">{name} - <Ratings ratings={rating} /> </span> 
+      <div class="skills-item">{name} - <Ratings ratings={rating} /> </div> 
     {/each}
   </div>
 </div>
