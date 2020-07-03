@@ -1,13 +1,9 @@
 <script>
-  import { getContext } from 'svelte';
   import { Route, link } from 'svelte-routing';
   import Home from 'pages/Home.svelte';
   import Resume from 'pages/resume/Resume.svelte';
   import Blog from 'pages/Blog.svelte';
   import Pdf from 'pages/Pdf.svelte';
-
-  const test = getContext('initialState');
-  console.log(test)
 </script>
 
 <style>
@@ -23,7 +19,7 @@
     background-color: #ffffff;
     box-shadow: 0px 0px 60px 10px;
     text-align: center;
-    width: 75%;
+    width: 90%;
     height: 90%;
   }
 
