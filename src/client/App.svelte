@@ -7,12 +7,14 @@
   import Background from 'containers/background/Background.svelte';
 
   export let url;
-  export let mainInfo;
-  export let experience;
-  export let education;
-  export let skills;
+  export let client;
+  export let mainInfo = [];
+  export let experience = [];
+  export let education = [];
+  export let skills = [];
 
   const store = writable({ 
+    client,
     mainInfo, 
     experience,
     education,
