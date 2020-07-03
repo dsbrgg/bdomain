@@ -1,0 +1,77 @@
+{
+  "mainInfo": {
+    "name": "Diego Braga",
+    "location": "Porto, Portugal",
+    "email": "dsbrgg@gmail.com",
+    "description": "I'm a brazillian developer who has learned software engineering mostly in a self-taught manner. Most of my experience has been as a web engineer but I'm very interested in embedded systems and audio programming."
+  },
+  "experience": [{
+    "first": true,
+    "company": "Seegno",
+    "job": "Back End Engineer",
+    "timeSpan": "Oct|2019 - Present",
+    "description": "At Seegno, I had the possibility to implement many features related to stores and internal integrations for a fintech SaaS project. Along with the development team, I had the responsability to create reliable backend code following good practices of software engineering and profuse automated applicational and integration tests. It was also a good experience for being able to investigate technologies at a point that it was even necessary to try to contribute to large FOSS.",
+    "tech": "nodejs, koa, objection, knex, jest, postgres, aws, docker, vault, graphql, python, django, saas, multitenancy, rest, git"
+  }, {
+    "company": "Applied Blockchain",
+    "job": "Full Stack Engineer",
+    "timeSpan": "Sep|2018 - Aug|2019",
+    "description": "At Applied Blockchain, I had involvement in many POC projects with a variety of clients, ranging from telecom and liquid natural gas trading platforms. I also had the possibility engineer and design some projects with the Ethereum blockchain (only testnet) by coding in Solidity. In some cases I had the opportunity to implement technologies that I saw most fit and was responsible to present some of the projects to our clients technology partners.",
+    "tech": "nodejs, koa, bookshelf, mocha, jest, react, postgres, docker, parity, blockchain, ethereum, solidity, rest, git"
+  }, {
+    "company": "PrimeIT",
+    "job": "Front End Engineer",
+    "timeSpan": "May|2018 - Aug|2018",
+    "description": "At PrimeIT, I had a small participation by working as an outsourced developer, mainly dealing with small tasks on the frontend part of some businesses. It was a very brief experience and I didn't have time to actually develop very throughly my skills and have some sort of major impact from the tasks I was assigned to do.",
+    "tech": "angularjs, vue, html, css, git"
+  }, {
+    "last": true,
+    "company": "TW Latin America",
+    "job": "Full Stack Engineer",
+    "timeSpan": "Sep|2014 - Jun|2017",
+    "description": "TW Latin America was where I had the opportunity to start my software engineer career and learn the fundamentals on the field. I had a mentor with vast experience in Java and C# programming who had worked on the automotive industry. I was introduced to Nodejs at a quite early version (v4.0) and also worked on mongodb which was also at a very early stage and NoSQL databases were still being considered within companies worldwide. At the frontend part, we were using a framework that was component based but still didn't have the maturity as most frameworks have nowadays, but it was a good learning experience to understand overall progamming concepts on the web.",
+    "tech": "nodejs, express, mongodb, webix, html, css, .net, mssql, git"
+  }],
+  "education": [{
+    "first": true,
+    "last": true,
+    "institute": "ISLA Gaia",
+    "course": "Web Development",
+    "timeSpan": "Sep|2017 - Incomplete",
+    "description": "The course focused on teaching general concepts about web development by structuring its course on the fundamentals of programming ranging from data modeling normalisation and structure for SQL oriented databases, cryptography, mobile development, frontend development with HTML and CSS and backend development with PHP and C#."
+  }],
+  "skills": [{
+    "name": "Javascript",
+    "rating": 5
+  }, {
+    "name": "Nodejs",
+    "rating": 5
+  }, {
+    "name": "React",
+    "rating": 3
+  }, {
+    "name": "Angular",
+    "rating": 3
+  }, {
+    "name": "Svelte",
+    "rating": 3
+  }, {
+    "name": "Vue",
+    "rating": 2
+  }, {
+    "name": "SQL",
+    "rating": 4
+  }, {
+    "name": "NoSQL",
+    "rating": 3
+  }, {
+    "name": ".NET",
+    "rating": 2
+  }, {
+    "name": "Python",
+    "rating": 3
+  }, {
+    "name": "Django",
+    "rating": 2
+  }]
+}

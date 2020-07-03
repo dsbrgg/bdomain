@@ -2,10 +2,10 @@
 
 import KoaRouter from 'koa-router';
 
+import renderTemplate from 'routes/renderTemplate';
 import blog from 'routes/webpage/blog/blog';
 import resume from 'routes/webpage/resume/resume';
 import prepareRouter from 'routes/utils/prepareRouter';
-import renderTemplate from 'routes/utils/renderTemplate';
 
 const router = new KoaRouter({});
 
