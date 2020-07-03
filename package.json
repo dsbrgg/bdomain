@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon -e js,svelte --exec npm run dev:setup",
+    "dev": "nodemon -e js,json,svelte --exec npm run dev:setup",
     "dev:setup": "npm run build:dev && babel-node src/server/server.js",
     "dev:push": "heroku container:push web -a bdomain-dev",
     "dev:release": "heroku container:release web -a bdomain-dev",
