@@ -7,8 +7,8 @@
 
     p5.setup = () => {
       const {
-        displayWidth: width, 
-        displayHeight: height, 
+        windowWidth: width, 
+        windowHeight: height, 
         HSB
       } = p5;
 
@@ -19,8 +19,8 @@
 
     p5.windowResize = () => {
       const {
-        displayWidth: width, 
-        displayHeight: height
+        windowWidth: width, 
+        windowHeight: height
       } = p5;
 
       p5.resizeCanvas(width, height);
@@ -28,7 +28,7 @@
 
     p5.draw = () => {
       const {
-        displayHeight: height, 
+        windowHeight: height, 
         mouseX, 
         mouseY
       } = p5;
