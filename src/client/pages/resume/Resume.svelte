@@ -1,5 +1,5 @@
 <script>
-  import { getContext, onDestroy } from 'svelte';
+  import { getContext, onMount, onDestroy } from 'svelte';
   import Transition from 'components/Transition.svelte';
   import MainInfo from 'pages/resume/components/MainInfo.svelte';
   import Experience from 'pages/resume/components/Experience.svelte';
@@ -12,12 +12,14 @@
 
   const store = getContext('initialState');
   const unsubscribe = store.subscribe(({ 
+    client,
     mainInfo, 
     experience,
     education,
     skills
   }) => { 
-    data = { 
+    data = {
+      client,
       mainInfo,
       experience,
       education,
@@ -25,7 +27,31 @@
     }; 
   });
 
-  onDestroy(() => { unsubscribe(); });
+  
+  onDestroy(unsubscribe);
+
+  onMount(async () => {
+    const { 
+      client,
+      mainInfo, 
+      experience,
+      education, 
+      skills 
+    } = data;
+
+    if (
+      !mainInfo.length 
+      || !experience.length 
+      || !education.length 
+      || !skills.length
+    ) {
+      const headers = { 'X-State': '/resume' };
+      const response = await fetch(`${client.api}/resume`, { headers });
+      const state = await response.json();
+
+      store.update(st => ({ ...st, ...state })); 
+    }
+  });
 </script>
 
 <style>
@@ -45,6 +71,7 @@
 </style>
 
 <Transition>
+  <button>Download me!</button>
   <div class="resume-container">
     <MainInfo {...data.mainInfo} />
     {#each data.experience as experience}
