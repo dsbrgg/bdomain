@@ -17,7 +17,7 @@ router.get('/download', async ctx => {
 
   await page.goto(url, parameters);
 
-  const pdf = await page.pdf({ format });
+  const pdf = await page.pdf(format);
 
   await browser.close();
 
