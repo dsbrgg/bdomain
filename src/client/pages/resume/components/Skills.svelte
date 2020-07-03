@@ -1,5 +1,7 @@
 <script>
   import Ratings from 'components/Ratings.svelte';
+
+  export let skills;
 </script>
 
 <style>
@@ -26,7 +28,7 @@
   .skills-list {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    justify-content: center;
   }
 
   .skills-item {
@@ -51,16 +53,9 @@
 <span class="skills-title">Skills</span>
 <div class="skills-container">
   <div class="skills-list">
-    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span> 
-    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span>
-    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span> 
-    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span>
-  </div>
-  <div class="skills-list">
-    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span> 
-    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span>
-    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span> 
-    <span class="skills-item">Javascript - <Ratings ratings={5} /> </span>
+    {#each skills as { name, rating }}
+      <span class="skills-item">{name} - <Ratings ratings={rating} /> </span> 
+    {/each}
   </div>
 </div>
 <hr />

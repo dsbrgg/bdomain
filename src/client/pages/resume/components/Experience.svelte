@@ -1,6 +1,12 @@
 <script>
   export let first = false;
   export let last = false;
+
+  export let company;
+  export let job;
+  export let timeSpan;
+  export let description;
+  export let tech;
 </script>
 
 <style>
@@ -25,10 +31,16 @@
 
   .experience-general {
     display: flex;
-    box-shadow: 1px 2px 10px 1px;
     flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 2px 10px 1px;
     padding: 1em;
-    width: 20em;
+    width: 20%;
+    height: 10em;
+  }
+
+  .experience-general-info {
+    align-self: center;
   }
 
   .experience-name {
@@ -38,6 +50,7 @@
   .experience-description {
     align-self: center;
     margin-left: 4em;
+    width: 80%;
   }
 
   .experience-description-main {
@@ -83,22 +96,19 @@
 {/if}
 <div class="experience-container"> 
   <div class="experience-general">
-    <h3 class="experience-name">Seegno</h3>
-    <span>Backend Engineer</span>
-    <span>Oct|2019 - Present</span>
+    <div class="experience-general-info">
+      <h3 class="experience-name">{company}</h3>
+      <div>{job}</div>
+      <div>{timeSpan}</div>
+    </div>
   </div> 
  
   <div class="experience-description">
-    <div class="experience-description-main">
-      Huge description to make sure you understand I'm great and you should really hire me.
-      Just trying a simple text to see how much this can handle right here.
-    </div>
+    <div class="experience-description-main">{description}</div>
     <hr />
     <div class="experience-description-tech">
       <b>Technologies used:</b> 
-      <span class="experience-description-tech-label">
-        tech1, tech2, tech3, tech4
-      </span>
+      <span class="experience-description-tech-label">{tech}</span>
     </div>
   </div>   
 </div>

@@ -1,4 +1,8 @@
 <script>
+  export let institute;
+  export let course;
+  export let timeSpan;
+  export let description;
   export let first = false;
   export let last = false;
 </script>
@@ -26,10 +30,16 @@
 
   .education-general {
     display: flex;
-    box-shadow: 1px 2px 10px 1px;
     flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 2px 10px 1px;
     padding: 1em;
-    width: 20em;
+    width: 20%;
+    height: 10em;
+  }
+
+  .education-general-info {
+    align-self: center;
   }
 
   .education-name {
@@ -39,6 +49,7 @@
   .education-description {
     align-self: center;
     margin-left: 4em;
+    width: 80%;
   }
 
   .education-description-main {
@@ -84,23 +95,15 @@
 {/if}
 <div class="education-container">
   <div class="education-general">
-    <h3 class="education-name">ISLA</h3>
-    <span>Web Development</span>
-    <span>Sep|2017 - Incomplete</span>
+    <div class="education-general-info">
+      <h3 class="education-name">{institute}</h3>
+      <div>{course}</div>
+      <div>{timeSpan}</div>
+    </div> 
   </div> 
  
   <div class="education-description">
-    <div class="education-description-main">
-      Huge description to make sure you understand I'm great and you should really hire me.
-      Just trying a simple text to see how much this can handle right here.
-    </div>
-    <hr />
-    <div class="education-description-tech">
-      <b>Technologies used:</b> 
-      <span class="education-description-tech-label">
-        tech1, tech2, tech3, tech4
-      </span>
-    </div>
+    <div class="education-description-main">{description}</div>
   </div> 
 </div>
 {#if last}

@@ -1,4 +1,8 @@
 <script>
+  export let name;
+  export let location;
+  export let email;
+  export let description;
 </script>
 
 <style>
@@ -35,19 +39,16 @@
 
 <div class="main-info-container">
   <div class="main-info-data">
-    <h2 id="main-info-name">Diego Braga</h2>
-    <span>Porto, Portugal</span>
+    <h2 id="main-info-name">{name}</h2>
+    <span>{location}</span>
     <span>//</span>
-    <span>dsbrgg@gmail.com</span>
+    <span>{email}</span>
   </div>
 
   <hr />
 
   <div class="main-info-description">
-    <span>
-      This is a very fucking short description for you.
-      Just so you fucking hire me and stop the fucking bullshit.
-    </span>
+    <span>{description}</span>
   </div>
 
   <hr />
