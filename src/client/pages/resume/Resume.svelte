@@ -1,4 +1,5 @@
 <script>
+  import { getContext, onDestroy } from 'svelte';
   import Transition from 'components/Transition.svelte';
   import MainInfo from 'pages/resume/components/MainInfo.svelte';
   import Experience from 'pages/resume/components/Experience.svelte';
@@ -6,6 +7,25 @@
   import Skills from 'pages/resume/components/Skills.svelte';
 
   export let location;
+
+  let data;
+
+  const store = getContext('initialState');
+  const unsubscribe = store.subscribe(({ 
+    mainInfo, 
+    experience,
+    education,
+    skills
+  }) => { 
+    data = { 
+      mainInfo,
+      experience,
+      education,
+      skills
+    }; 
+  });
+
+  onDestroy(() => { unsubscribe(); });
 </script>
 
 <style>
@@ -26,11 +46,13 @@
 
 <Transition>
   <div class="resume-container">
-    <MainInfo />
-    <Experience first={true} />
-    <Experience />
-    <Experience last={true} />
-    <Education first={true} last={true} />
-    <Skills />
+    <MainInfo {...data.mainInfo} />
+    {#each data.experience as experience}
+      <Experience {...experience} />
+    {/each}
+    {#each data.education as education}
+      <Education {...education} />
+    {/each}
+    <Skills skills={data.skills} />
   </div>
 </Transition>
