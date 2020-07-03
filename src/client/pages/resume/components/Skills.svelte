@@ -30,12 +30,13 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    height: 7em;
+    height: 11em;
     width: 100%;
   }
 
   .skills-item {
     margin-top: 1em;
+    font-size: 1.2em;
   }
 
   @media (max-width: 500px), (max-height: 800px) {
@@ -57,7 +58,7 @@
 <div class="skills-container">
   <div class="skills-list">
     {#each skills as { name, rating }}
-      <div class="skills-item">{name} - <Ratings ratings={rating} /> </div> 
+      <div class="skills-item">{name} <Ratings ratings={rating} /> </div> 
     {/each}
   </div>
 </div>
