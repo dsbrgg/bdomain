@@ -27,7 +27,7 @@ router.get('/download', async ctx => {
   await page.setViewport(viewport);
   await page.goto(url, parameters);
   await page.emulateMedia(media);
-  await page.waitFor(5000);
+  await page.waitFor(2000);
 
   const pdf = await page.pdf(format);
 
