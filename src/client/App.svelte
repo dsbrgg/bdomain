@@ -8,7 +8,7 @@
 
   export let url;
   export let client;
-  export let mainInfo = [];
+  export let mainInfo = {};
   export let experience = [];
   export let education = [];
   export let skills = [];
