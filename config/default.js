@@ -18,12 +18,12 @@ module.exports = {
     filename: 'diebo_braga_cv',
     format: {
       width: 1800,
-      height: 2400
+      height: 2400,
+      printBackground: true
     },
     url: 'http://localhost:5001/pdf',
     parameters: {
       waitUntil: 'networkidle0'
-    },
-    printBackground: true
+    }
   }
 };
