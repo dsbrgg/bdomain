@@ -7,10 +7,45 @@
   import Skills from 'pages/resume/components/Skills.svelte';
 
   export let location;
+  export let saveFile = false;
 
   let data;
 
   const store = getContext('initialState');
+
+  const mount = async () => {
+    const { 
+      client,
+      mainInfo, 
+      experience,
+      education, 
+      skills 
+    } = data;
+
+    // yuck :(
+    if (
+      !Object.keys(mainInfo).length
+      || !experience.length 
+      || !education.length 
+      || !skills.length
+    ) { 
+      const headers = { 'X-State': '/resume' };
+      const response = await fetch(`${client.api}/resume`, { headers });
+      const state = await response.json();
+
+      $store = { ...store, ...state }; 
+    }
+  };
+
+  const handleClick = async () => {
+    const { client } = data;
+    const response = await fetch(`${client.api}/pdf/download`);
+    const pdf = await response.blob();
+    const [ _, filename ] = response.headers.get('Content-Disposition').match(/filename=(.*)/);
+
+    download(pdf, filename);
+  };
+
   const unsubscribe = store.subscribe(({ 
     client,
     mainInfo, 
@@ -26,32 +61,9 @@
       skills
     }; 
   });
-
   
+  onMount(mount);
   onDestroy(unsubscribe);
-
-  onMount(async () => {
-    const { 
-      client,
-      mainInfo, 
-      experience,
-      education, 
-      skills 
-    } = data;
-
-    if (
-      !mainInfo.length 
-      || !experience.length 
-      || !education.length 
-      || !skills.length
-    ) {
-      const headers = { 'X-State': '/resume' };
-      const response = await fetch(`${client.api}/resume`, { headers });
-      const state = await response.json();
-
-      store.update(st => ({ ...st, ...state })); 
-    }
-  });
 </script>
 
 <style>
@@ -71,7 +83,10 @@
 </style>
 
 <Transition>
-  <button>Download me!</button>
+  {#if !saveFile}
+    <button on:click={handleClick}>Download me!</button>
+  {/if}
+
   <div class="resume-container">
     <MainInfo {...data.mainInfo} />
     {#each data.experience as experience}
