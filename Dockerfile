@@ -15,4 +15,11 @@ RUN npm install
 # Bundle app source
 COPY ./dist .
 
+ARG current_env
+ENV NODE_ENV=${current_env}
+
+RUN if [ "$current_env" = "staging" ] ; then  echo   your NODE_ENV for stage is $NODE_ENV;  \
+else  echo your NODE_ENV for dev is $NODE_ENV; \
+fi 
+
 CMD [ "npm", "start" ]

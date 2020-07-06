@@ -15,7 +15,8 @@
       {
         "root": ["./src/server"],
         "alias": {
-          "test": "./test"
+          "test": "./test",
+          "public": "./src/server/public"
         }
       }
     ]
