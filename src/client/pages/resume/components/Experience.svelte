@@ -59,7 +59,7 @@
   }
 
   .experience-prime-it-logo {
-    background-image: url("https://res.cloudinary.com/crazynoiainc/image/upload/v1594059863/prime-it-logo-min_urweve.png");
+    background-image: url("https://res.cloudinary.com/crazynoiainc/image/upload/v1594067043/prime-it-logo-min_o1dqcw.png");
   }
 
   .experience-tw-latin-america-logo {
