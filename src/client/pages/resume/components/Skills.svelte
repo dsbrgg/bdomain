@@ -19,24 +19,31 @@
 
   .skills-container {
     display: flex;
-    margin-top: 2em; 
+    margin-top: 1em; 
     margin-left: 4em;
     margin-right: 4em;
     margin-bottom: 4em;
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2em;
   }
 
   .skills-list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
-    height: 11em;
+    justify-content: center;
+    height: 17em;
     width: 100%;
   }
 
   .skills-item {
-    margin-top: 1em;
+    margin-top: 0.8em;
+    margin-bottom: 0.5em; 
     font-size: 1.2em;
+  }
+
+  .skills-ratings {
+    margin-bottom: 1.5em;
   }
 
   @media (max-width: 500px), (max-height: 800px) {
@@ -58,7 +65,10 @@
 <div class="skills-container">
   <div class="skills-list">
     {#each skills as { name, rating }}
-      <div class="skills-item">{name} <Ratings ratings={rating} /> </div> 
+      <div class="skills-item">{name}</div> 
+      <div class="skills-ratings">
+        <Ratings ratings={rating} />
+      </div>
     {/each}
   </div>
 </div>
