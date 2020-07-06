@@ -6,16 +6,28 @@ import puppeteer from 'puppeteer';
 import renderTemplate from 'routes/renderTemplate';
 import prepareRouter from 'routes/utils/prepareRouter';
 
-const { headless, filename, format, url, parameters } = config.get('pdf');
+const {
+  chromium,
+  filename,
+  format,
+  url,
+  viewport,
+  parameters,
+  media
+} = config.get('pdf');
+
 const router = new KoaRouter({ prefix: '/pdf' });
 
 router.get('/', renderTemplate);
 
 router.get('/download', async ctx => {
-  const browser = await puppeteer.launch({ headless });
+  const browser = await puppeteer.launch(chromium);
   const page = await browser.newPage();
 
+  await page.setViewport(viewport);
   await page.goto(url, parameters);
+  await page.emulateMedia(media);
+  await page.waitFor(5000);
 
   const pdf = await page.pdf(format);
 
