@@ -6,7 +6,15 @@ module.exports = {
     port: 5001
   },
   pdf: {
-    headless: true,
+    chromium: {
+      headless: true
+    },
+    viewport: {
+      width: 1800,
+      height: 2400,
+      deviceScaleFactor: 2
+    },
+    media: 'print',
     filename: 'diebo_braga_cv',
     format: {
       width: 1800,
@@ -15,6 +23,7 @@ module.exports = {
     url: 'http://localhost:5001/pdf',
     parameters: {
       waitUntil: 'networkidle0'
-    }
+    },
+    printBackground: true
   }
 };
