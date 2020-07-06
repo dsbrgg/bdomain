@@ -22,6 +22,6 @@
 
 <div id="pdf-page">
   <div id="pdf-format">
-    <Resume />
+    <Resume saveFile={true} />
   </div>
 </div>
