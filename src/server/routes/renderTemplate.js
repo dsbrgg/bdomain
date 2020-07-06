@@ -9,7 +9,7 @@ const client = config.get('client');
 
 const getState = url => {
   switch (url) {
-    case '/': return { ...resume, client, url };
+    case '/': return { client, url };
     case '/blog': return { client, url };
     case '/resume': return { ...resume, client, url };
     case '/pdf': return { ...resume, client, url };
