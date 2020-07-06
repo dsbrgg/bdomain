@@ -33,10 +33,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 0.5em;
     box-shadow: 1px 2px 10px 1px;
     padding: 1em;
     width: 20%;
-    height: 10em;
+    height: 10em; 
+  }
+
+  .experience-general::after {
+    background-image: url("../seegno-logo-min.jpeg");
+    background-size: 7em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.4;
   }
 
   .experience-general-info {
