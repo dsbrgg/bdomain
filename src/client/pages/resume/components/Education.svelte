@@ -32,6 +32,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 0.5em;
     box-shadow: 1px 2px 10px 1px;
     padding: 1em;
     width: 20%;
