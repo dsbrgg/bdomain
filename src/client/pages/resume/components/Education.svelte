@@ -1,4 +1,5 @@
 <script>
+  export let logo;
   export let institute;
   export let course;
   export let timeSpan;
@@ -37,6 +38,19 @@
     padding: 1em;
     width: 20%;
     height: 10em;
+  }
+
+  .education-general-logo {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1em;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .education-isla-logo {
+    background-image: url("https://res.cloudinary.com/crazynoiainc/image/upload/v1594067045/isla-logo-min_wm5uzq.png");
   }
 
   .education-general-info {
@@ -96,6 +110,7 @@
 {/if}
 <div class="education-container">
   <div class="education-general">
+    <div class="education-general-logo {logo}" />
     <div class="education-general-info">
       <h3 class="education-name">{institute}</h3>
       <div>{course}</div>
