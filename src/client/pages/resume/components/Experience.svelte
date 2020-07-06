@@ -2,6 +2,7 @@
   export let first = false;
   export let last = false;
 
+  export let logo;
   export let company;
   export let job;
   export let timeSpan;
@@ -37,15 +38,32 @@
     box-shadow: 1px 2px 10px 1px;
     padding: 1em;
     width: 20%;
-    height: 10em; 
+    height: 10em;
+  }
+  
+  .experience-general-logo {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1em;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
-  .experience-general::after {
-    background-image: url("../seegno-logo-min.jpeg");
-    background-size: 7em;
-    background-repeat: no-repeat;
-    background-position: center center;
-    opacity: 0.4;
+  .experience-seegno-logo {
+    background-image: url("https://res.cloudinary.com/crazynoiainc/image/upload/v1594059863/seegno-logo-min_t2nvsk.jpg");
+  }
+
+  .experience-applied-blockchain-logo {
+    background-image: url("https://res.cloudinary.com/crazynoiainc/image/upload/v1594059863/applied-blockchain-logo-min_dj09xt.jpg");
+  }
+
+  .experience-prime-it-logo {
+    background-image: url("https://res.cloudinary.com/crazynoiainc/image/upload/v1594059863/prime-it-logo-min_urweve.png");
+  }
+
+  .experience-tw-latin-america-logo {
+    background-image: url("https://res.cloudinary.com/crazynoiainc/image/upload/v1594059863/tw-latin-america-logo-min_vtq3ak.png");
   }
 
   .experience-general-info {
@@ -104,7 +122,8 @@
   <span class="experience-title">Experience</span>
 {/if}
 <div class="experience-container"> 
-  <div class="experience-general">
+  <div class="experience-general"> 
+    <div class="experience-general-logo {logo}" />
     <div class="experience-general-info">
       <h3 class="experience-name">{company}</h3>
       <div>{job}</div>
