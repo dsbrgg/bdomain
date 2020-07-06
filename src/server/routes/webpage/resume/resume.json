@@ -39,6 +39,7 @@
   "education": [{
     "first": true,
     "last": true,
+    "logo": "education-isla-logo",
     "institute": "ISLA Gaia",
     "course": "Web Development",
     "timeSpan": "Sep|2017 - Incomplete",
