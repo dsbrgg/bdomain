@@ -7,18 +7,21 @@
   },
   "experience": [{
     "first": true,
+    "logo": "experience-seegno-logo",
     "company": "Seegno",
     "job": "Back End Engineer",
     "timeSpan": "Oct|2019 - Present",
     "description": "At Seegno, I had the possibility to implement many features related to stores and internal integrations for a fintech SaaS project. Along with the development team, I had the responsability to create reliable backend code following good practices of software engineering and profuse automated applicational and integration tests. It was also a good experience for being able to investigate technologies at a point that it was even necessary to try to contribute to large FOSS.",
     "tech": "nodejs, koa, objection, knex, jest, postgres, aws, docker, vault, graphql, python, django, saas, multitenancy, rest, git"
   }, {
+    "logo": "experience-applied-blockchain-logo",
     "company": "Applied Blockchain",
     "job": "Full Stack Engineer",
     "timeSpan": "Sep|2018 - Aug|2019",
     "description": "At Applied Blockchain, I had involvement in many POC projects with a variety of clients, ranging from telecom and liquid natural gas trading platforms. I also had the possibility engineer and design some projects with the Ethereum blockchain (only testnet) by coding in Solidity. In some cases I had the opportunity to implement technologies that I saw most fit and was responsible to present some of the projects to our clients technology partners.",
     "tech": "nodejs, koa, bookshelf, mocha, jest, react, postgres, docker, parity, blockchain, ethereum, solidity, rest, git"
   }, {
+    "logo": "experience-prime-it-logo",
     "company": "PrimeIT",
     "job": "Front End Engineer",
     "timeSpan": "May|2018 - Aug|2018",
@@ -26,6 +29,7 @@
     "tech": "angularjs, vue, html, css, git"
   }, {
     "last": true,
+    "logo": "experience-tw-latin-america-logo",
     "company": "TW Latin America",
     "job": "Full Stack Engineer",
     "timeSpan": "Sep|2014 - Jun|2017",
