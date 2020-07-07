@@ -1,4 +1,15 @@
-FROM node:12
+FROM node:alpine
+
+# install puppeteer needed dependencies
+ENV CHROME_BIN="/usr/bin/chromium-browser" \
+  PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
+    
+RUN apk add --no-cache \
+    msttcorefonts-installer \
+    fontconfig \ 
+    udev \
+    ttf-freefont \
+    chromium
 
 # Create app directory
 WORKDIR /app
@@ -17,9 +28,5 @@ COPY ./dist .
 
 ARG current_env
 ENV NODE_ENV=${current_env}
-
-RUN if [ "$current_env" = "staging" ] ; then  echo   your NODE_ENV for stage is $NODE_ENV;  \
-else  echo your NODE_ENV for dev is $NODE_ENV; \
-fi 
 
 CMD [ "npm", "start" ]
