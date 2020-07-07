@@ -7,10 +7,14 @@ module.exports = {
   },
   pdf: {
     chromium: {
+      executablePath: process.env.CHROME_BIN,
       headless: true,
       args: [
         '--no-sandbox',
-        '--disable-setuid-sandbox',
+        '--enable-font-antialiasing',
+        '--font-render-hinting=none',
+        '--disable-gpu',
+        '--disable-dev-shm-usage'
       ]
     },
     viewport: {
