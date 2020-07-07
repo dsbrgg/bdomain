@@ -12,9 +12,9 @@
     "copy:json": "cp src/server/routes/webpage/resume/resume.json dist/routes/webpage/resume/resume.json",
     "start": "node server.js",
     "build": "rm -rf dist/public/build/* && rm -rf src/server/public/build/* && rm -rf dist/config && rollup -c && babel src/server -d dist && cp -r ./dist/public/* ./src/server/public && cp -r ./config dist/config && npm run copy:json",
-    "build:dev": "NODE_ENV=dev npm run build",
+    "build:dev": "npm run build",
     "docker": "docker-compose up",
-    "docker:build": "docker image build --build-arg current_env=staging -t bdomain-dev ."
+    "docker:build:dev": "docker image build --build-arg current_env=development -t bdomain-dev ."
   },
   "nodemonConfig": {
     "ignore": [
