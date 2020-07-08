@@ -4,6 +4,8 @@
   import Resume from 'pages/resume/Resume.svelte';
   import Blog from 'pages/Blog.svelte';
   import Pdf from 'pages/Pdf.svelte';
+
+  export let saveFile;
 </script>
 
 <style>
@@ -51,17 +53,22 @@
   }
 </style>
 
-<Route path="pdf" component="{Pdf}" />
-<div class="bg-content">
-  <div id="main-content">
-    <nav id="main-nav">
-      <a href="blog" use:link>Blog</a>
-      <a href="resume" use:link>Resume</a>
-    </nav>
-    <div class="current-content">
-      <Route path="/" component="{Home}" />
-      <Route path="blog" component="{Blog}" />
-      <Route path="resume" component="{Resume}" />
+{#if saveFile}
+  <Route path="pdf" component="{Pdf}" />
+{/if}
+
+{#if !saveFile}
+  <div class="bg-content">
+    <div id="main-content">
+      <nav id="main-nav">
+        <a href="blog" use:link>Blog</a>
+        <a href="resume" use:link>Resume</a>
+      </nav>
+      <div class="current-content">
+        <Route path="/" component="{Home}" />
+        <Route path="blog" component="{Blog}" />
+        <Route path="resume" component="{Resume}" />
+      </div>
     </div>
   </div>
-</div>
+{/if}
