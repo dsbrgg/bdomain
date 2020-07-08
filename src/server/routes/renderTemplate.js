@@ -12,7 +12,7 @@ const getState = url => {
     case '/': return { client, url };
     case '/blog': return { client, url };
     case '/resume': return { ...resume, client, url };
-    case '/pdf': return { ...resume, client, url };
+    case '/pdf': return { ...resume, saveFile: true, client, url };
     default: return null;
   }
 };
