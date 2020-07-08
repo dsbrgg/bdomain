@@ -10,6 +10,7 @@ const aliases = alias({
   resolve: ['.svelte', '.js'], //optional, by default this will just look for .js files or folders
   entries: [
     { find: 'App.svelte', replacement: './App.svelte' },
+    { find: /^api\/(.*)/, replacement: 'src/client/api/$1' },
     { find: /^pages\/(.*)/, replacement: 'src/client/pages/$1' },
     { find: /^containers\/(.*)/, replacement: 'src/client/containers/$1' },
     { find: /^components\/(.*)/, replacement: 'src/client/components/$1' },
