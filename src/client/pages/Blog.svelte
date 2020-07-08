@@ -1,23 +1,37 @@
 <script>
-  import { getContext, onDestroy } from 'svelte';
+  import { getContext, onMount } from 'svelte';
+  import fetchState from 'api/index.js';
   import Transition from 'components/Transition.svelte';
+  import Loading from 'components/Loading.svelte';
 
   export let location;
   
-  let summary;
+  let data = {
+    init: false,
+    posts: undefined
+  };
 
-  const test = getContext('initialState');
-  const unsubscribe = test.subscribe(({ test }) => {
-    summary = test;
-  });
+  const store = getContext('initialState');
 
-  onDestroy(() => {
-    console.log('unsubscribed blog');
-    unsubscribe();
-  });
+  const mount = async () => {
+    const { client, blog } = $store;
+
+    if (!blog) { 
+      const state = 'blog';
+      const response = await fetchState({
+        client,
+        state 
+      });
+
+      $store = { ...$store, ...response }; 
+    }
+
+    data = { ...$store.blog, init: true };
+  };
+  
+  onMount(mount);
 </script>
 
 <Transition>
-  <h1>My Blog</h1>
-  {summary}
+  {data.posts}
 </Transition>
