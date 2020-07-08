@@ -11,7 +11,7 @@ export default ({ html, css, head, state }) => `
       <link rel='icon' type='image/png' href='/favicon.png'>
       <link rel='stylesheet' href='/normalize.css'>
       <link rel='stylesheet' href='/build/bundle.css'>
-      <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@400;700&family=Permanent+Marker&family=Shadows+Into+Light&family=Roboto+Mono:ital,wght@0,100;0,400;0,700;1,100&family=Fira+Code:wght@700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Architects+Daughter&family=Caveat:wght@400;700&family=Permanent+Marker&family=Shadows+Into+Light&family=Roboto+Mono:ital,wght@0,100;0,400;0,700;1,100&family=Fira+Code:wght@700&display=swap" rel="stylesheet">
     </head>
     <body>
       ${html}
