@@ -26,8 +26,10 @@
   }
 
   #main-nav {
-    margin-top: 2em;
-    margin-bottom: 2em; 
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #000000;
   }
 
   nav#main-nav > * {
@@ -35,14 +37,6 @@
     color: inherit;
   }
 
-  nav#main-nav > a:nth-child(1) {
-    margin-right: 1em;
-  }
-
-  nav#main-nav > a:nth-child(2) {
-    margin-right: 1em;
-  }
- 
   .current-content {
     height: 85%;
     display: flex;
@@ -55,18 +49,19 @@
 
 {#if saveFile}
   <Route path="pdf" component="{Pdf}" />
-{/if}
-
-{#if !saveFile}
+{:else}
   <div class="bg-content">
     <div id="main-content">
       <nav id="main-nav">
-        <a href="blog" use:link>Blog</a>
-        <a href="resume" use:link>Resume</a>
+        <a href="/" use:link>home</a>
+        <span>//</span>
+        <!-- <a href="blog" use:link>blog</a>
+        <span>//</span> -->
+        <a href="resume" use:link>resume</a>
       </nav>
       <div class="current-content">
         <Route path="/" component="{Home}" />
-        <Route path="blog" component="{Blog}" />
+        <!-- <Route path="blog" component="{Blog}" /> -->
         <Route path="resume" component="{Resume}" />
       </div>
     </div>
