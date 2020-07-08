@@ -4,6 +4,7 @@ export default ({ html, css, head, state }) => `
   <html>
     <head>
       ${head}
+      <title>dsbrgg | web dev</title>
       <style>
         ${css.code}
       </style>
