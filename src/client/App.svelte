@@ -8,6 +8,7 @@
 
   export let url;
   export let client;
+  export let saveFile;
   export let mainInfo = {};
   export let experience = [];
   export let education = [];
@@ -15,6 +16,7 @@
 
   const store = writable({ 
     client,
+    saveFile,
     mainInfo, 
     experience,
     education,
@@ -26,5 +28,5 @@
 
 <Router url="{url}">
   <Background />
-  <Content /> 
+  <Content  saveFile={saveFile} /> 
 </Router>
