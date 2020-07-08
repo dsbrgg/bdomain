@@ -9,18 +9,16 @@
   export let url;
   export let client;
   export let saveFile;
-  export let mainInfo = {};
-  export let experience = [];
-  export let education = [];
-  export let skills = [];
+  export let blog;
+  export let resume;
+  export let home;
 
   const store = writable({ 
     client,
     saveFile,
-    mainInfo, 
-    experience,
-    education,
-    skills
+    blog,
+    resume,
+    home
   });
   
   setContext('initialState', store);
