@@ -3,16 +3,18 @@
 import config from 'config';
 import template from 'template';
 import ssr from 'public/build/ssr.js';
+import home from 'routes/webpage/webpage.json';
+import blog from 'routes/webpage/blog/blog.json';
 import resume from 'routes/webpage/resume/resume.json';
 
 const client = config.get('client');
 
 const getState = url => {
   switch (url) {
-    case '/': return { client, url };
-    case '/blog': return { client, url };
-    case '/resume': return { ...resume, client, url };
-    case '/pdf': return { ...resume, saveFile: true, client, url };
+    case '/': return { home, client, url };
+    case '/blog': return { blog, client, url };
+    case '/resume': return { resume, client, url };
+    case '/pdf': return { resume, saveFile: true, client, url };
     default: return null;
   }
 };
