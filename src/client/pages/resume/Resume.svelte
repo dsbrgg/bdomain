@@ -1,6 +1,8 @@
 <script>
   import { getContext, onMount, onDestroy } from 'svelte';
+  import fetchState from 'api/index.js';
   import Transition from 'components/Transition.svelte';
+  import Loading from 'components/Loading.svelte';
   import MainInfo from 'pages/resume/components/MainInfo.svelte';
   import Experience from 'pages/resume/components/Experience.svelte';
   import Education from 'pages/resume/components/Education.svelte';
@@ -9,69 +11,59 @@
   export let location;
   export let saveFile = false;
 
-  let data;
-  let loading;
+  let error;
+  let needState;
+  let downloadingPdf;
+  let data = { 
+    init: false,
+    mainInfo: {}, 
+    experience: [], 
+    education: [], 
+    skills: [] 
+  };
 
   const store = getContext('initialState');
-
+  
   const mount = async () => {
-    const { 
-      client,
-      mainInfo, 
-      experience,
-      education, 
-      skills 
-    } = data;
+    const { client, resume } = $store;
 
-    // yuck :(
-    if (
-      !Object.keys(mainInfo).length
-      || !experience.length 
-      || !education.length 
-      || !skills.length
-    ) { 
-      const headers = { 'X-State': '/resume' };
-      const response = await fetch(`${client.api}/resume`, { headers });
-      const state = await response.json();
+    if (!resume) { 
+      const state = 'resume';
+      const response = await fetchState({
+        client,
+        state 
+      });
 
-      $store = { ...store, ...state }; 
+      $store = { ...$store, ...response }; 
     }
+
+    data = { ...$store.resume, init: true };
   };
 
   const handleClick = async () => {
-    if (loading) { return; }
+    if (downloadingPdf) { return; }
 
-    const { client } = data;
+    const { client } = $store;
   
-    loading = true;
+    error = false;
+    downloadingPdf = true;
 
-    const response = await fetch(`${client.api}/pdf/download`);
-    const pdf = await response.blob();
-    const [ _, filename ] = response.headers.get('Content-Disposition').match(/filename=(.*)/);
+    try {
+      const response = await fetch(`${client.api}/pdf/download`);
+      const pdf = await response.blob();
+      const [ _, filename ] = response.headers.get('Content-Disposition').match(/filename=(.*)/);
 
-    loading = false;
+      download(pdf, filename);
+    } catch (e) {
+      // need to implement some sort of popup mechanism
+      error = true;  
+      console.log(e)
+    }
 
-    download(pdf, filename);
+    downloadingPdf = false;
   };
-
-  const unsubscribe = store.subscribe(({ 
-    client,
-    mainInfo, 
-    experience,
-    education,
-    skills
-  }) => { 
-    data = {
-      client,
-      mainInfo,
-      experience,
-      education,
-      skills
-    }; 
-  });
   
   onMount(mount);
-  onDestroy(unsubscribe);
 </script>
 
 <style>
@@ -97,6 +89,10 @@
 
   .resume-download:focus {
     outline: 0;
+  }
+
+  .resume-loading {
+    font-size: xxx-large;
   }
 
   .rotate {
@@ -127,24 +123,23 @@
 
 <Transition> 
   <div class="resume-container">
-    <MainInfo {...data.mainInfo} />
-    {#each data.experience as experience}
-      <Experience {...experience} />
-    {/each}
-    {#each data.education as education}
-      <Education {...education} />
-    {/each}
-    <Skills skills={data.skills} />
-    
-    {#if !saveFile}
-      <button class="resume-download" on:click={handleClick}>
-        {#if loading}
-          <i class="fas fa-spinner rotate"></i>
-        {/if}
-        {#if !loading}
-          Download me!
-        {/if}
-      </button> 
-    {/if}
+    <Loading condition={data.init} large={true}>
+      <MainInfo {...data.mainInfo} />
+      {#each data.experience as experience}
+        <Experience {...experience} />
+      {/each}
+      {#each data.education as education}
+        <Education {...education} />
+      {/each}
+      <Skills skills={data.skills} />
+      
+      {#if !saveFile}
+        <button class="resume-download" on:click={handleClick}>
+          <Loading condition={!downloadingPdf} >
+            Download me!
+          </Loading>
+        </button> 
+      {/if}
+    </Loading>
   </div> 
 </Transition>
