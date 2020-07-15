@@ -3,8 +3,11 @@
 export default ({ html, css, head, state }) => `
   <html>
     <head>
-      ${head}
       <title>dsbrgg | web dev</title>
+
+      <meta charset="utf-8">
+      ${head}
+
       <style>
         ${css.code}
       </style>
