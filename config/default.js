@@ -15,10 +15,10 @@ module.exports = {
       deviceScaleFactor: 2
     },
     media: 'print',
-    filename: 'diebo_braga_cv',
+    filename: 'diego_braga_cv',
     format: {
       width: 1800,
-      height: 2400,
+      height: 2600,
       printBackground: true
     },
     url: 'http://localhost:5001/pdf',
