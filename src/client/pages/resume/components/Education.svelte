@@ -53,6 +53,10 @@
     background-image: url("https://res.cloudinary.com/crazynoiainc/image/upload/v1594067045/isla-logo-min_wm5uzq.png");
   }
 
+  .education-uol-logo {
+    background-image: url("https://res.cloudinary.com/crazynoiainc/image/upload/v1611581594/uol-logo-min_i5bo4w.png");
+  }
+
   .education-general-info {
     align-self: center;
   }
