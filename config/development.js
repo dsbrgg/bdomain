@@ -23,10 +23,10 @@ module.exports = {
       deviceScaleFactor: 2
     },
     media: 'print',
-    filename: 'diebo_braga_cv',
+    filename: 'diego_braga_cv',
     format: {
       width: 1800,
-      height: 2400,
+      height: 2600,
       printBackground: true
     },
     url: 'https://bdomain-dev.herokuapp.com/pdf',
