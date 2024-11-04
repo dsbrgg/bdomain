@@ -131,7 +131,7 @@
       {#each data.education as education}
         <Education {...education} />
       {/each}
-      <Skills skills={data.skills} />
+      <!-- <Skills skills={data.skills} /> -->
       
       {#if !saveFile}
         <button class="resume-download" on:click={handleClick}>

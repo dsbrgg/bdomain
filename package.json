@@ -1,56 +1,56 @@
 {
-  "name": "bdomain-backend",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "NODE_ENV=default nodemon -e js,json,svelte --exec npm run dev:setup",
-    "dev:setup": "npm run build:dev && babel-node src/server/server.js",
-    "dev:push": "heroku container:push web --arg current_env=development -a bdomain-dev",
-    "dev:release": "heroku container:release web -a bdomain-dev",
-    "dev:logs": "heroku logs -a bdomain-dev --tail",
-    "copy": "npm run copy:resume:json && npm run copy:home:json && npm run copy:blog:json",
-    "copy:resume:json": "cp src/server/routes/webpage/resume/resume.json dist/routes/webpage/resume/resume.json",
-    "copy:blog:json": "cp src/server/routes/webpage/blog/blog.json dist/routes/webpage/blog/blog.json",
-    "copy:home:json": "cp src/server/routes/webpage/webpage.json dist/routes/webpage/webpage.json",
-    "start": "node server.js",
-    "build": "rm -rf dist/public/build/* && rm -rf src/server/public/build/* && rm -rf dist/config && rollup -c && babel src/server -d dist && cp -r ./dist/public/* ./src/server/public && cp -r ./config dist/config && npm run copy",
-    "build:dev": "npm run build",
-    "docker": "docker-compose up",
-    "docker:build:dev": "docker build --build-arg current_env=development -t bdomain-dev ."
-  },
-  "nodemonConfig": {
-    "ignore": [
-      "dist/",
-      "src/server/public/"
-    ],
-    "delay": "5000"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "config": "^3.3.1",
-    "koa": "^2.12.0",
-    "koa-router": "^9.0.1",
-    "koa-send": "^5.0.0",
-    "puppeteer": "^3.3.0"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.10.4",
-    "@babel/core": "^7.10.4",
-    "@babel/node": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
-    "@rollup/plugin-alias": "^3.1.1",
-    "@rollup/plugin-commonjs": "^13.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^8.1.0",
-    "babel-plugin-module-resolver": "^4.0.0",
-    "nodemon": "^2.0.4",
-    "rollup": "^2.18.1",
-    "rollup-plugin-livereload": "^1.3.0",
-    "rollup-plugin-svelte": "^5.2.3",
-    "rollup-plugin-terser": "^6.1.0",
-    "svelte": "^3.23.2",
-    "svelte-routing": "^1.4.2"
-  }
+    "name": "bdomain-backend",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "NODE_ENV=default nodemon -e js,json,svelte --exec npm run dev:setup",
+        "dev:setup": "npm run build:dev && babel-node src/server/server.js",
+        "dev:push": "heroku container:push web --arg current_env=development -a bdomain-dev",
+        "dev:release": "heroku container:release web -a bdomain-dev",
+        "dev:logs": "heroku logs -a bdomain-dev --tail",
+        "copy": "npm run copy:resume:json && npm run copy:home:json && npm run copy:blog:json",
+        "copy:resume:json": "cp src/server/routes/webpage/resume/resume.json dist/routes/webpage/resume/resume.json",
+        "copy:blog:json": "cp src/server/routes/webpage/blog/blog.json dist/routes/webpage/blog/blog.json",
+        "copy:home:json": "cp src/server/routes/webpage/webpage.json dist/routes/webpage/webpage.json",
+        "start": "node server.js",
+        "build": "rm -rf dist/public/build/* && rm -rf src/server/public/build/* && rm -rf dist/config && rollup -c && babel src/server -d dist && cp -r ./dist/public/* ./src/server/public && cp -r ./config dist/config && npm run copy",
+        "build:dev": "npm run build",
+        "docker": "docker-compose up",
+        "docker:build:dev": "docker build --build-arg current_env=development -t bdomain-dev ."
+    },
+    "nodemonConfig": {
+        "ignore": [
+            "dist/",
+            "src/server/public/"
+        ],
+        "delay": "2000"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "config": "^3.3.1",
+        "koa": "^2.12.0",
+        "koa-router": "^9.0.1",
+        "koa-send": "^5.0.0",
+        "puppeteer": "^3.3.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.10.4",
+        "@babel/core": "^7.10.4",
+        "@babel/node": "^7.10.4",
+        "@babel/preset-env": "^7.10.4",
+        "@rollup/plugin-alias": "^3.1.1",
+        "@rollup/plugin-commonjs": "^13.0.0",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^8.1.0",
+        "babel-plugin-module-resolver": "^4.0.0",
+        "nodemon": "^2.0.4",
+        "rollup": "^2.18.1",
+        "rollup-plugin-livereload": "^1.3.0",
+        "rollup-plugin-svelte": "^5.2.3",
+        "rollup-plugin-terser": "^6.1.0",
+        "svelte": "^3.23.2",
+        "svelte-routing": "^1.4.2"
+    }
 }

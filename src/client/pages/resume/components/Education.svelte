@@ -50,11 +50,11 @@
   }
 
   .education-isla-logo {
-    background-image: url("https://res.cloudinary.com/crazynoiainc/image/upload/v1594067045/isla-logo-min_wm5uzq.png");
+    background-image: url("../isla-logo-min.png");
   }
 
   .education-uol-logo {
-    background-image: url("https://res.cloudinary.com/crazynoiainc/image/upload/v1611581594/uol-logo-min_i5bo4w.png");
+    background-image: url("../uol-logo-min.png");
   }
 
   .education-general-info {

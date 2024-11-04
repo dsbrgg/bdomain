@@ -19,8 +19,8 @@ export default ({ html, css, head, state }) => `
     </head>
     <body>
       ${html}
-      <script src="https://kit.fontawesome.com/5063aa095a.js" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/p5@1.11.1/lib/p5.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
       <script>
         window.__PRELOADED_STATE__ = ${JSON.stringify(state).replace(

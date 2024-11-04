@@ -50,20 +50,24 @@
     background-size: contain;
   }
 
+  .experience-kraken-logo {
+    background-image: url("../kraken-logo.png");
+  }
+
   .experience-seegno-logo {
-    background-image: url("https://res.cloudinary.com/crazynoiainc/image/upload/v1594059863/seegno-logo-min_t2nvsk.jpg");
+    background-image: url("../seegno-logo-min.jpeg");
   }
 
   .experience-applied-blockchain-logo {
-    background-image: url("https://res.cloudinary.com/crazynoiainc/image/upload/v1594059863/applied-blockchain-logo-min_dj09xt.jpg");
+    background-image: url("../applied-blockchain-logo-min.jpg");
   }
 
   .experience-prime-it-logo {
-    background-image: url("https://res.cloudinary.com/crazynoiainc/image/upload/v1594067043/prime-it-logo-min_o1dqcw.png");
+    background-image: url("../prime-it-logo-min.png");
   }
 
   .experience-tw-latin-america-logo {
-    background-image: url("https://res.cloudinary.com/crazynoiainc/image/upload/v1594059863/tw-latin-america-logo-min_vtq3ak.png");
+    background-image: url("../tw-latin-america-logo-min.png");
   }
 
   .experience-general-info {
