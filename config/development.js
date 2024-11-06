@@ -3,7 +3,7 @@ module.exports = {
     api: 'https://bdomain-dev.herokuapp.com'
   },
   server: {
-    port: 5001
+    port: 8000
   },
   pdf: {
     chromium: {

@@ -71,14 +71,6 @@ export default [{
 
         commonjs(),
 
-        // bundle images
-        image({
-            output: `dist/public/images`, // default the root
-            extensions: /\.(png|jpg|jpeg|gif|svg)$/, // support png|jpg|jpeg|gif|svg, and it's alse the default value
-            limit: 508192,  // default 8192(8k)
-            exclude: 'node_modules/**'
-        }),
-
         // allow relative path finding
         aliases
     ]

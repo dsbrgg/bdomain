@@ -11,6 +11,8 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-print-color-adjust: exact;
+  -webkit-filter: opacity(1);
   width: 100% !important;
   height: 100% !important;
   margin: 0 !important;
