@@ -4,9 +4,9 @@
   import Transition from 'components/Transition.svelte';
   import Loading from 'components/Loading.svelte';
   import MainInfo from 'pages/resume/components/MainInfo.svelte';
+  import Technology from 'pages/resume/components/Technology.svelte';
   import Experience from 'pages/resume/components/Experience.svelte';
   import Education from 'pages/resume/components/Education.svelte';
-  import Skills from 'pages/resume/components/Skills.svelte';
 
   export let location;
   export let saveFile = false;
@@ -19,7 +19,7 @@
     mainInfo: {}, 
     experience: [], 
     education: [], 
-    skills: [] 
+    technology: [],
   };
 
   const store = getContext('initialState');
@@ -125,13 +125,11 @@
   <div class="resume-container">
     <Loading condition={data.init} large={true}>
       <MainInfo {...data.mainInfo} />
+      <Technology data={data.technology} />
       {#each data.experience as experience}
         <Experience {...experience} />
       {/each}
-      {#each data.education as education}
-        <Education {...education} />
-      {/each}
-      <!-- <Skills skills={data.skills} /> -->
+      <Education data={data.education} />
       
       {#if !saveFile}
         <button class="resume-download" on:click={handleClick}>

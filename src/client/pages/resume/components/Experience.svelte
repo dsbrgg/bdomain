@@ -14,20 +14,18 @@
   .experience-title {
     display: inline-block;
     font-weight: bold;
-    font-style: italic;
     font-size: 1.5em;
-    padding-bottom: 0.5em;
+    text-decoration-line: underline;
+    margin-top: 1em;
     margin-bottom: 0.5em;
-    border-bottom: #000000 solid 1px;
-    color: darkgoldenrod;
   }
 
   .experience-container {
     display: flex;
-    margin-top: 2em;
+    margin-top: 1em;
     margin-left: 4em;
     margin-right: 4em;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
   }
 
   .experience-general {
@@ -139,7 +137,7 @@
     <div class="experience-description-main">{description}</div>
     <hr />
     <div class="experience-description-tech">
-      <b>Technologies used:</b> 
+      <b>Achievements:</b> 
       <span class="experience-description-tech-label">{tech}</span>
     </div>
   </div>   

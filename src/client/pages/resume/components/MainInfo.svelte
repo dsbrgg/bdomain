@@ -14,6 +14,10 @@
     margin-bottom: 1em;
   }
 
+  .main-info-data a {
+    color: inherit;
+  }
+
   #main-info-name {
     font-family: 'Shadows Into Light', cursive;
     font-size: 3em;
@@ -41,6 +45,8 @@
   <div class="main-info-data">
     <h2 id="main-info-name">{name}</h2>
     <span>{location}</span>
+    <span>//</span>
+    <a href="https://github.com/dsbrgg">https://github.com/dsbrgg</a>
     <span>//</span>
     <span>{email}</span>
   </div>

@@ -10,15 +10,15 @@ module.exports = {
             headless: true
         },
         viewport: {
-            width: 1800,
-            height: 2400,
+            width: 2000,
+            height: 2300,
             deviceScaleFactor: 2
         },
         media: 'print',
         filename: 'diego_braga_cv',
         format: {
-            width: 1800,
-            height: 2600,
+            width: 2000,
+            height: 2300,
             printBackground: true,
             preferCSSPageSize: true
         },

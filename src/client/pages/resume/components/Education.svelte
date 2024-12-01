@@ -1,32 +1,23 @@
 <script>
-  export let logo;
-  export let institute;
-  export let course;
-  export let timeSpan;
-  export let description;
-  export let first = false;
-  export let last = false;
+  export let data;
 </script>
 
 <style>
   .education-title {
     display: inline-block;
     font-weight: bold;
-    font-style: italic;
     font-size: 1.5em;
+    text-decoration-line: underline;
     margin-top: 0.7em;
-    padding-bottom: 0.5em;
-    margin-bottom: 0.5em;
-    border-bottom: #000000 solid 1px;
-    color: darkgoldenrod;
   }
 
   .education-container {
     display: flex;
-    margin-top: 2em; 
+    justify-content: space-around;
+    margin-top: 1em; 
     margin-left: 4em;
     margin-right: 4em;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
   }
 
   .education-general {
@@ -65,24 +56,6 @@
     margin-top: 0.1em;
   }
 
-  .education-description {
-    align-self: center;
-    margin-left: 4em;
-    width: 80%;
-  }
-
-  .education-description-main {
-    margin-bottom: 1em;
-  }
-
-  .education-description-tech {
-    margin-top: 1em;
-  }
-
-  .education-description-tech-label {
-    font-weight: 100;
-  }
-
   @media (max-width: 500px), (max-height: 800px) {
     .education-container {
       display: flex;
@@ -109,23 +82,17 @@
   }
 </style>
 
-{#if first}
-  <span class="education-title">Education</span>
-{/if}
+<span class="education-title">Education</span>
 <div class="education-container">
-  <div class="education-general">
-    <div class="education-general-logo {logo}" />
-    <div class="education-general-info">
-      <h3 class="education-name">{institute}</h3>
-      <div>{course}</div>
-      <div>{timeSpan}</div>
-    </div> 
-  </div> 
- 
-  <div class="education-description">
-    <div class="education-description-main">{description}</div>
-  </div> 
+    {#each data as education}
+      <div class="education-general">
+        <div class="education-general-logo {education.logo}" />
+        <div class="education-general-info">
+          <h3 class="education-name">{education.institute}</h3>
+          <div>{education.course}</div>
+          <div>{education.timeSpan}</div>
+        </div> 
+      </div> 
+    {/each}
 </div>
-{#if last}
-  <hr />
-{/if}
+<hr />

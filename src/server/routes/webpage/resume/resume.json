@@ -3,45 +3,65 @@
         "name": "Diego Braga",
         "location": "Porto, Portugal",
         "email": "dsbrgg@gmail.com",
-        "description": "I'm a Brazillian developer with a wide range of experiences in the tech industry. Although focused on backend engineering, my skillset is broad enough to enable tackling frontend challenges or wider scope system integrations."
+        "description": "Software engineer with a 10 years of experience in a wide range of systems in the industry. Spent around 4 years working on different projects that ranged from ERP implementations to ecommerce custom stores. Migrated to more blockchain specific technologies with roughly 4 - 5 years of experience in the field. I'm knowledgeable on building and maintaining plenty of different blockchain nodes and integrating systems to them. Focused on bringing concrete value to companies by understanding their business drivers by finding and executing the appropriate solution."
     },
+    "technology": [{
+        "first": true,
+        "description": "Languages",
+        "options": ["Typescript/Nodejs", "Python", "Rust", "Golang"]
+    }, {
+        "description": "Infrastructure",
+        "options": ["AWS", "Nomad", "Kubernetes", "Docker"]
+    }, {
+        "description": "Blockchain",
+        "options": ["EVM based", "Cosmos SDK based", "Sui", "Near", "Aptos", "Nano", "Stellar"]
+    }, {
+        "description": "Architecture",
+        "options": ["Monoliths", "Microservices", "Event-Driven", "Multitenancy", "REST"]
+    }, {
+        "description": "Databases",
+        "options": ["RDS (MySQL, Postgres)", "NoSQL (Mongodb)"]
+    }, {
+        "description": "Protocols",
+        "options": ["HTTP", "AMQP", "gRPC", "Kafka"]
+    }],
     "experience": [{
         "first": true,
         "logo": "experience-kraken-logo",
         "company": "Kraken Exchange",
         "job": "Software Engineer",
         "timeSpan": "Oct|2021 - Nov|2024",
-        "description": "At Kraken, I had the opportunity to have direct impact within the Funding department and across different teams. On Funding engineering, the main responsability was taking care of building secure implementations to detect deposits and perform withdrawals in a myriad of different L1 blockchains (Sui, Near, Fantom, Ripple, Flow, Aptos, Cosmos SDK based chains, Substrate based chains and many others). Node setup/maintenance and service incident handling was also very tightly dealt with as the role required engineers to keep downtime to a minimum since these services had direct impact on clients. Wider scope projects also had a big part on the role since we were encouraged to drive inovation into the company through RFCs and POCs to be presented to our teams.",
-        "tech": "typescript, nodejs, rust, crypto, blockchain, docker, nomad, prometheus, grafana, kubernetes, kafka, event-driven architecture, monorepo, mariadb"
+        "description": "At Kraken, I had the opportunity to have direct impact within the Funding department and across different teams. On Funding engineering, the main responsability was taking care of building secure implementations for different crypto payment gateways. Node setup/maintenance and service incident handling was also very tightly dealt with as the role required engineers to keep downtime to a minimum. Wider scope projects also had a big part on the role since it was encouraged to drive inovation into the company through RFCs and POCs.",
+        "tech": "building and deploying multiple crypto payment gateways responsible for managing USD 30,000,000.00+ client funds | reduced company costs by USD 50,000.00+ implementing allowance mechanism on EVM based gateways | helped automated funds reconciliation for company IPO readiness | migrated monolith services into microservices leveraging event-driven architecture for faster and better systems throughput"
     }, {
         "logo": "experience-seegno-logo",
         "company": "Seegno",
         "job": "Software Engineer",
         "timeSpan": "Oct|2019 - Oct|2021",
         "description": "At Seegno, I had the possibility to implement many features related to stores and internal integrations for a fintech SaaS project. Along with the development team, I had the responsability to create reliable backend code following good practices of software engineering and profuse automated applicational and integration tests. It was also a good experience for being able to investigate technologies at a point that it was even necessary to try to contribute to large FOSS.",
-        "tech": "nodejs, koa, objection, knex, jest, postgres, aws, docker, vault, graphql, python, django, saas, multitenancy, rest, git, microservices architecture"
+        "tech": "refactored open-source headless ecommerce software called Saleor to accept multitenant behaviour and store separation | full ownership of many microservices with direct client impact | implementation of the Public Mint EARN distribution algorithm for synthetic fiat currency accrual"
     }, {
         "logo": "experience-applied-blockchain-logo",
         "company": "Applied Blockchain",
         "job": "Software Engineer",
         "timeSpan": "Sep|2018 - Aug|2019",
         "description": "At Applied Blockchain, I had involvement in many POC projects with a variety of clients, ranging from telecom and liquid natural gas trading platforms. I also had the possibility engineer and design some projects with the Ethereum blockchain (only testnet) by coding in Solidity. In some cases I had the opportunity to implement technologies that I saw most fit and was responsible to present some of the projects to our clients technology partners.",
-        "tech": "nodejs, koa, bookshelf, mocha, jest, react, postgres, docker, parity, blockchain, ethereum, solidity, rest, git"
+        "tech": "fully owned TIM Telecom POC for tokenization of GDPR data implementing from the frontend layer to the blockchain layer | lead the implementation of a LNG trading platform for a private market of up to USD 10,000,000.00"
     }, {
         "logo": "experience-prime-it-logo",
         "company": "PrimeIT",
         "job": "Frontend Engineer",
         "timeSpan": "May|2018 - Aug|2018",
         "description": "At PrimeIT, I had a small participation by working as an outsourced developer, mainly dealing with small tasks on the frontend part of some businesses. It was a very brief experience and I didn't have time to actually develop very throughly my skills and have some sort of major impact from the tasks I was assigned to do.",
-        "tech": "angularjs, vue, html, css, git"
+        "tech": "helped on tasks for backoffice actions on EDP internal programmes | report automation for american trucker companies"
     }, {
         "last": true,
         "logo": "experience-tw-latin-america-logo",
         "company": "TW Latin America",
         "job": "Full Stack Engineer",
         "timeSpan": "Sep|2014 - Jun|2017",
-        "description": "TW Latin America was where I had the opportunity to start my software engineer career and learn the fundamentals on the field. I had a mentor with vast experience in Java and C# programming who had worked on the automotive industry. I was introduced to Nodejs at a quite early version (v4.0) and also worked on mongodb which was also at a very early stage and NoSQL databases were still being considered within companies worldwide. At the frontend part, we were using a framework that was component based but still didn't have the maturity as most frameworks have nowadays.",
-        "tech": "nodejs, express, mongodb, webix, html, css, .net, mssql, git"
+        "description": "TW Latin America was where I had the opportunity to start my software engineer career and learn the fundamentals on the field. Mainly taking care of different tasks ranging from the frontend to the backend and consolidating my field knowledge on the implementations I've worked on.",
+        "tech": "worked on a B2B event sales system for one of Brazil's biggest textile company which handled up to R$ 5,000,000.00 (~USD 900,000.00 at 01/12/2024) per event day"
     }],
     "education": [{
         "first": true,
