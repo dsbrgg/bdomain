@@ -3,6 +3,7 @@
   export let location;
   export let email;
   export let description;
+  export let timezone;
 </script>
 
 <style>
@@ -49,6 +50,8 @@
     <a href="https://github.com/dsbrgg">https://github.com/dsbrgg</a>
     <span>//</span>
     <span>{email}</span>
+    <span>//</span>
+    <span>{timezone}</span>
   </div>
 
   <hr />

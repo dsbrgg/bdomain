@@ -91,7 +91,8 @@
   }
 
   .experience-description-tech-label {
-    font-weight: 100;
+      font-style: italic;
+      font-weight: bold;
   } 
 
   @media (max-width: 500px), (max-height: 800px) {
