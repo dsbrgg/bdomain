@@ -67,13 +67,11 @@
         "logo": "education-uol-logo",
         "institute": "University of London",
         "course": "BSc Computer Science",
-        "timeSpan": "Oct|2020",
-        "description": "University of London Bachelor program is focused on learning the core fundamentals of computing and concepts that range from a variety of topics within computer science such as discrete mathematics, algorithms and data structures, OOP, data science and many other topics."
+        "timeSpan": "Oct|2020"
     }, {
         "logo": "education-isla-logo",
         "institute": "ISLA Gaia",
         "course": "Web Development",
-        "timeSpan": "Sep|2017",
-        "description": "The course focused on teaching general concepts about web development by structuring its course on the fundamentals of programming ranging from data modeling normalisation and structure for SQL oriented databases, cryptography, mobile development, frontend development with HTML and CSS and backend development with PHP and C#."
+        "timeSpan": "Sep|2017"
     }]
 }
