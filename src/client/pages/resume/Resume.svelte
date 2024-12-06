@@ -124,7 +124,7 @@
 <Transition> 
   <div class="resume-container">
     <Loading condition={data.init} large={true}>
-      <MainInfo {...data.mainInfo} />
+    <!--<MainInfo {...data.mainInfo} /> -->
       <Technology data={data.technology} />
       {#each data.experience as experience}
         <Experience {...experience} />

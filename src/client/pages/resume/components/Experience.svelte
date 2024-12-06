@@ -49,23 +49,23 @@
   }
 
   .experience-kraken-logo {
-    background-image: url("../kraken-logo.png");
+    background-image: url("../template.jpg");
   }
 
   .experience-seegno-logo {
-    background-image: url("../seegno-logo-min.jpeg");
+    background-image: url("../template.jpg");
   }
 
   .experience-applied-blockchain-logo {
-    background-image: url("../applied-blockchain-logo-min.jpg");
+    background-image: url("../template.jpg");
   }
 
   .experience-prime-it-logo {
-    background-image: url("../prime-it-logo-min.png");
+    background-image: url("../template.jpg");
   }
 
   .experience-tw-latin-america-logo {
-    background-image: url("../tw-latin-america-logo-min.png");
+    background-image: url("../template.jpg");
   }
 
   .experience-general-info {

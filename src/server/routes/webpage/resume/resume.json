@@ -28,52 +28,50 @@
     "experience": [{
         "first": true,
         "logo": "experience-kraken-logo",
-        "company": "Kraken Exchange",
+        "company": "Company A",
         "job": "Software Engineer",
         "timeSpan": "Oct|2021 - Nov|2024",
-        "description": "At Kraken, I had the opportunity to have direct impact within the Funding department and across different teams. On Funding engineering, the main responsability was taking care of building secure implementations for different crypto payment gateways. Node setup/maintenance and service incident handling was also very tightly dealt with as the role required engineers to keep downtime to a minimum. Wider scope projects also had a big part on the role since it was encouraged to drive inovation into the company through RFCs and POCs.",
+        "description": "At Company A, I had the opportunity to have direct impact within the Funding department and across different teams. On Funding engineering, the main responsability was taking care of building secure implementations for different crypto payment gateways. Node setup/maintenance and service incident handling was also very tightly dealt with as the role required engineers to keep downtime to a minimum. Wider scope projects also had a big part on the role since it was encouraged to drive inovation into the company through RFCs and POCs.",
         "tech": "building and deploying multiple crypto payment gateways responsible for managing USD 30,000,000.00+ client funds || reduced company costs by USD 50,000.00+ implementing allowance mechanism on EVM based gateways || helped automated funds reconciliation for company IPO readiness || migrated monolith services into microservices leveraging event-driven architecture for faster and better systems throughput"
     }, {
         "logo": "experience-seegno-logo",
-        "company": "Seegno",
+        "company": "Company B",
         "job": "Software Engineer",
         "timeSpan": "Oct|2019 - Oct|2021",
-        "description": "At Seegno, I had the possibility to implement many features related to stores and internal integrations for a fintech SaaS project. Along with the development team, I had the responsability to create reliable backend code following good practices of software engineering and profuse automated applicational and integration tests. It was also a good experience for being able to investigate technologies at a point that it was even necessary to try to contribute to large FOSS.",
+        "description": "At Company B, I had the possibility to implement many features related to stores and internal integrations for a fintech SaaS project. Along with the development team, I had the responsability to create reliable backend code following good practices of software engineering and profuse automated applicational and integration tests. It was also a good experience for being able to investigate technologies at a point that it was even necessary to try to contribute to large FOSS.",
         "tech": "refactored open-source headless ecommerce software called Saleor to accept multitenant behaviour and store separation || full ownership of many microservices with direct client impact || implementation of the Public Mint EARN distribution algorithm for synthetic fiat currency accrual"
     }, {
         "logo": "experience-applied-blockchain-logo",
-        "company": "Applied Blockchain",
+        "company": "Company C",
         "job": "Software Engineer",
         "timeSpan": "Sep|2018 - Aug|2019",
-        "description": "At Applied Blockchain, I had involvement in many POC projects with a variety of clients, ranging from telecom and liquid natural gas trading platforms. I also had the possibility engineer and design some projects with the Ethereum blockchain (only testnet) by coding in Solidity. In some cases I had the opportunity to implement technologies that I saw most fit and was responsible to present some of the projects to our clients technology partners.",
+        "description": "At Company C, I had involvement in many POC projects with a variety of clients, ranging from telecom and liquid natural gas trading platforms. I also had the possibility engineer and design some projects with the Ethereum blockchain (only testnet) by coding in Solidity. In some cases I had the opportunity to implement technologies that I saw most fit and was responsible to present some of the projects to our clients technology partners.",
         "tech": "fully owned TIM Telecom POC for tokenization of GDPR data implementing from the frontend layer to the blockchain layer || lead the implementation of a LNG trading platform for a private market of up to USD 10,000,000.00"
     }, {
         "logo": "experience-prime-it-logo",
-        "company": "PrimeIT",
+        "company": "Company D",
         "job": "Frontend Engineer",
         "timeSpan": "May|2018 - Aug|2018",
-        "description": "At PrimeIT, I had a small participation by working as an outsourced developer, mainly dealing with small tasks on the frontend part of some businesses. It was a very brief experience and I didn't have time to actually develop very throughly my skills and have some sort of major impact from the tasks I was assigned to do.",
+        "description": "At Company D, I had a small participation by working as an outsourced developer, mainly dealing with small tasks on the frontend part of some businesses. It was a very brief experience and I didn't have time to actually develop very throughly my skills and have some sort of major impact from the tasks I was assigned to do.",
         "tech": "helped on tasks for backoffice actions on EDP internal programmes || report automation for american trucker companies"
     }, {
         "last": true,
         "logo": "experience-tw-latin-america-logo",
-        "company": "TW Latin America",
+        "company": "Company E",
         "job": "Full Stack Engineer",
         "timeSpan": "Sep|2014 - Jun|2017",
-        "description": "TW Latin America was where I had the opportunity to start my software engineer career and learn the fundamentals on the field. Mainly taking care of different tasks ranging from the frontend to the backend and consolidating my field knowledge on the implementations I've worked on.",
+        "description": "Company E was where I had the opportunity to start my software engineer career and learn the fundamentals on the field. Mainly taking care of different tasks ranging from the frontend to the backend and consolidating my field knowledge on the implementations I've worked on.",
         "tech": "worked on a B2B event sales system for one of Brazil's biggest textile company which handled up to R$ 5,000,000.00 (~USD 900,000.00 at 01/12/2024) per event day"
     }],
     "education": [{
         "logo": "education-uol-logo",
         "institute": "University of London",
         "course": "BSc Computer Science",
-        "timeSpan": "Oct|2020",
-        "description": "University of London Bachelor program is focused on learning the core fundamentals of computing and concepts that range from a variety of topics within computer science such as discrete mathematics, algorithms and data structures, OOP, data science and many other topics."
+        "timeSpan": "Oct|2020"
     }, {
         "logo": "education-isla-logo",
         "institute": "ISLA Gaia",
         "course": "Web Development",
-        "timeSpan": "Sep|2017",
-        "description": "The course focused on teaching general concepts about web development by structuring its course on the fundamentals of programming ranging from data modeling normalisation and structure for SQL oriented databases, cryptography, mobile development, frontend development with HTML and CSS and backend development with PHP and C#."
+        "timeSpan": "Sep|2017"
     }]
 }
