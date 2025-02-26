@@ -10,6 +10,9 @@
         "description": "Languages",
         "options": ["Typescript/Nodejs", "Python", "Rust", "Golang"]
     }, {
+        "description": "Frameworks",
+        "options": ["Express", "Koa", "React", "Vue", "Svelte", "Echo"]
+    }, {
         "description": "Infrastructure",
         "options": ["AWS", "Nomad", "Kubernetes", "Docker"]
     }, {

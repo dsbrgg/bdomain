@@ -6,7 +6,7 @@ import { pdf, webpage } from 'routes';
 import { publicMiddleware } from 'middlewares';
 import Koa from 'koa';
 
-const { PORT = 8000 } = process.env;
+const { PORT = 8888 } = process.env;
 const app = new Koa();
 
 webpage(app);
